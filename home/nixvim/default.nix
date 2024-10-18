@@ -204,6 +204,7 @@
         ripgrep
         fd
         bat
+        roslyn-ls # Required for C# LSP
       ];
 
     autoGroups = {
