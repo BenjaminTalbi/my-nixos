@@ -10,9 +10,11 @@ in
   imports = [ inputs.stylix.homeManagerModules.stylix ];
   
   home.file.".currenttheme".text = userSettings.theme;
+
   stylix.enable = true;
   stylix.autoEnable = false;
   stylix.polarity = polarity;
+
   stylix.image = pkgs.fetchurl {
     url = background.url;
     sha256 = background.sha256;
@@ -54,6 +56,7 @@ in
   stylix.targets.dunst.enable = true;
   stylix.targets.zellij.enable = true;
   stylix.targets.fuzzel.enable = true;
+  stylix.targets.firefox.enable = true;
 
   stylix.targets.kde.enable = true;
   stylix.targets.kitty.enable = true;
