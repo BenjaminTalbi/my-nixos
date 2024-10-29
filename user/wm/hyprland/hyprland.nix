@@ -82,7 +82,7 @@
       }
 
       master {
-        new_is_master = false
+        new_status = slave
       }
 
       xwayland {
@@ -188,7 +188,7 @@
       bind = SUPER SHIFT, m, layoutmsg, removemaster
 
       bind = SUPER, i, fullscreen, 0
-      bind = SUPER SHIFT, i, fakefullscreen 
+      bind = SUPER SHIFT, i, fullscreenstate, -1 2 
 
       # Resize window
       bind = SUPER, l, splitratio, -0.05

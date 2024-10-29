@@ -35,6 +35,13 @@
     google-chrome
     keyd
   ];
+  
+  fonts.packages = [
+    (pkgs.nerdfonts.override {
+      fonts = ["FiraCode" "JetBrainsMono"];
+    })
+  ];
+
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "23.11";

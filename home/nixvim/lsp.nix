@@ -27,17 +27,17 @@
         capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
       '';
       servers = {
-        nil-ls = {
+        nil_ls = {
           enable = true;
           settings.formatting.command = [ "nixpkgs-fmt" ];
         };
-        ts-ls.enable = true;
+        ts_ls.enable = true;
         svelte.enable = true;
         tailwindcss.enable = true;
         cssls.enable = true;
         html.enable = true;
-        lua-ls.enable = true;
-        emmet-ls = {
+        lua_ls.enable = true;
+        emmet_ls = {
           enable = false;
         };
         gopls = {

@@ -8,8 +8,9 @@ let
 in
 {
   imports = [ inputs.stylix.homeManagerModules.stylix ];
-
+  
   home.file.".currenttheme".text = userSettings.theme;
+  stylix.enable = true;
   stylix.autoEnable = false;
   stylix.polarity = polarity;
   stylix.image = pkgs.fetchurl {
@@ -17,6 +18,7 @@ in
     sha256 = background.sha256;
   };
   stylix.base16Scheme = ./${themePath};
+
   stylix.fonts = {
     monospace = {
       name = userSettings.font.monospace.name;

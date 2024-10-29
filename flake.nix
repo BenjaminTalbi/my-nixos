@@ -78,6 +78,7 @@
     {
 
       homeConfigurations = {
+	home-manager.backupFileExtension = "bak";
         "${userSettings.username}@wodan" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           inherit extraSpecialArgs;
