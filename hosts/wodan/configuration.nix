@@ -9,6 +9,8 @@
     ../../system/boot/systemd.nix
     ../../system/stylix
     ../../system/security/automount.nix
+    ../../system/optimization/store.nix
+    ../../system/vm/virt-manager.nix
   ];
 
   services.keyd = {
@@ -31,14 +33,25 @@
       "custom+shift" = { };
     };
   };
+
+  networking = {
+    useDHCP = false;
+    bridges.br0.interfaces = [ "enp11s0" ];
+    interfaces.br0.useDHCP = true;
+    # interfaces.eth0.useDHCP = true;
+    # interfaces.enp11s0.ipv4.addresses = [ ];
+    # interfaces.enp11s0.ipv6.addresses = [ ];
+  };
+
   environment.systemPackages = with pkgs; [
     google-chrome
     keyd
   ];
-  
-  fonts.packages = [
-    (pkgs.nerdfonts.override {
-      fonts = ["FiraCode" "JetBrainsMono"];
+
+  fonts.packages = with pkgs; [
+    inter
+    (nerdfonts.override {
+      fonts = [ "FiraCode" "JetBrainsMono" ];
     })
   ];
 

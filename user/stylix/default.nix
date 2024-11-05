@@ -56,7 +56,7 @@ in
   stylix.targets.dunst.enable = true;
   stylix.targets.zellij.enable = true;
   stylix.targets.fuzzel.enable = true;
-  stylix.targets.firefox.enable = true;
+  # stylix.targets.firefox.enable = true;
 
   stylix.targets.kde.enable = true;
   stylix.targets.kitty.enable = true;

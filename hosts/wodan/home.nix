@@ -18,6 +18,7 @@
     ../../home/shell
     ../../user/wm/hyprland/hyprland.nix
     ../../user/stylix
+    ../../home/vm
   ];
 
   home.stateVersion = "23.11";
