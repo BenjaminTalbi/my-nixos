@@ -1,4 +1,4 @@
-{ config, pkgs, userSettings, ... }:
+{ config, pkgs, userSettings, inputs, lib, ... }:
 
 {
   home.username = userSettings.username;
@@ -15,6 +15,7 @@
     ../../home/shared/packages.nix
     ../../home/nixvim
     ../../home/shell
+    ../../home/nvim
   ];
 
   home.stateVersion = "23.11";
@@ -27,6 +28,14 @@
     nodePackages_latest.nodejs
   ];
 
+  # # Some DRY functions and variables
+  # helpers = {
+  #   # This path will be used to resolve mkHotReloadSymlink path. It's prepended to the paramenter path. 
+  #   configFolder = "${config.home.homeDirectory}/my-nixos";
+  #   # This takes a path (not a string) to create a symlink for a regular .config folder.
+  #   # Use this when you want/need hot reloading or need to use the config on Windows where Nix can't be used
+  #   mkHotReloadSymlink = path: (config.helpers.configFolder + lib.strings.removePrefix (toString inputs.self) (toString path));
+  # };
 
   xdg.enable = true;
   xdg.userDirs = {
