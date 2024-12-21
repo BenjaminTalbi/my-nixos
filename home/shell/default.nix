@@ -2,7 +2,7 @@
 {
   imports = [
     ./starship.nix
-    ./fish.nix
+    ./nushell.nix
     ./zellij.nix
     ./keychain.nix
   ];

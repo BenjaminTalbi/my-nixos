@@ -39,7 +39,7 @@
     isNormalUser = true;
     description = userSettings.name;
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
+    shell = pkgs.nushell;
     packages = with pkgs; [ ];
     uid = 1000;
   };
