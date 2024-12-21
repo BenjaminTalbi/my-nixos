@@ -36,8 +36,14 @@
     enable = true;
     vimAlias = true;
     enableMan = true;
-    colorscheme = "rose-pine";
+    colorscheme = "kanagawa";
     colorschemes = {
+      kanagawa = {
+        enable = true;
+        settings = {
+          theme = "dragon";
+        };
+      };
       rose-pine = {
         enable = true;
         settings = {
@@ -173,7 +179,7 @@
     ];
 
     plugins = {
-      # hardtime.enable = true;
+      hardtime.enable = true;
       which-key.enable = true;
       web-devicons.enable = true;
     };
