@@ -1,4 +1,4 @@
-{ config, pkgs, userSettings, ... }:
+{ config, pkgs, userSettings, lib, ... }:
 
 {
   home.username = userSettings.username;
@@ -24,7 +24,7 @@
   home.stateVersion = "23.11";
 
   home.sessionVariables = {
-    EDITOR = userSettings.editor;
+    EDITOR = lib.mkDefault userSettings.editor;
   };
 
   home.packages = with pkgs; [

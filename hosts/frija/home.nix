@@ -13,7 +13,7 @@
 
   imports = [
     ../../home/shared/packages.nix
-    ../../home/nixvim
+    # ../../home/nixvim
     ../../home/shell
     ../../home/nvim
   ];
@@ -21,7 +21,7 @@
   home.stateVersion = "23.11";
 
   home.sessionVariables = {
-    EDITOR = userSettings.editor;
+    EDITOR = lib.mkDefault userSettings.editor;
   };
 
   home.packages = with pkgs; [
