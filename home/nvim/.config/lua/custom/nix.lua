@@ -13,7 +13,7 @@ end
 --@overload fun(left: any): any|nil
 --@overload fun(left: any, right:any): any
 function M.lazyEither(left, right)
-    if M.isNix then
+    if M.isNix() then
         return right
     else
         return left
