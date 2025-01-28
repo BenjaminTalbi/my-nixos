@@ -19,7 +19,7 @@ return {
 	},
 	{
 		"catppuccin/nvim",
-		enabled = false,
+		enabled = true,
 		name = "catppuccin",
 		priority = 1000,
 		init = function()
@@ -79,6 +79,7 @@ return {
 	{
 		"rebelot/kanagawa.nvim",
 		opts = {},
+		enabled = false,
 		priority = 1000,
 		init = function()
 			require("kanagawa").setup({
