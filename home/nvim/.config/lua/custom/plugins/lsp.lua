@@ -310,7 +310,7 @@ return {
       end
     end,
   },
-  {  -- Autocompletion
+  { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {

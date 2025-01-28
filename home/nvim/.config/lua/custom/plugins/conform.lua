@@ -28,6 +28,7 @@ return {
 				lua = { "stylua" },
 				sql = { "sleek" },
 				mysql = { "sleek" },
+				nix = { "nixfmt" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--

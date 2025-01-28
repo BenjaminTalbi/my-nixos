@@ -1,6 +1,10 @@
-{ pkgs, lib, config, inputs, ... }:
-
-
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}:
 
 let
   # Function to resolve the path to the real .config folder
@@ -15,11 +19,12 @@ in
     vimAlias = true;
     vimdiffAlias = true;
     extraPackages = with pkgs; [
-        vimPlugins.nvim-treesitter.withAllGrammars
-        nixd
-        svelte-language-server
-        lua-language-server        
-      ];
+      vimPlugins.nvim-treesitter.withAllGrammars
+      nixd
+      nixfmt-rfc-style
+      svelte-language-server
+      lua-language-server
+    ];
   };
 
   xdg.configFile.neovim = {
